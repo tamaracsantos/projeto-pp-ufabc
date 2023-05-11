@@ -1,0 +1,26 @@
+cabal-version:      3.4
+name:               demanda
+version:            0.1
+-- synopsis:
+-- description:
+license:            MIT
+license-file:       LICENSE
+author:             Tamara
+maintainer:         csantos.tamara@gmail.com
+-- copyright:
+category:           Data
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+-- extra-source-files:
+
+common warnings
+    ghc-options: -Wall
+
+executable demanda
+    import:           warnings
+    main-is:          Main.hs
+    other-modules:    Dados,Util,Grafico
+    -- other-extensions:
+    build-depends:    base, bytestring, cassava, vector,split,directory,Chart,Chart-diagrams,process,text                                                
+    hs-source-dirs:   app
+    default-language: Haskell2010
