@@ -1,14 +1,11 @@
 module Util where 
 import Dados
-import Data.ByteString.Char8 (pack)
-import Data.Csv
 import Text.Read (readMaybe)
 import System.Directory
 import System.IO
 import System.Process
 import Data.List.Split (splitOn)
 import Grafico
-import Data.List (sortBy)
 --Função para calcular o total de horas baseado na lista de Demandas
 totalHours :: [Demand] -> Int
 totalHours demands = round $ sum (map (\demand -> 1.5 * fromIntegral (complexity demand)) demands)
